@@ -67,7 +67,20 @@ export default function Footer() {
               <Phone size={16} className="text-yellowa mt-1" />
               <div className="flex flex-col">
                 <a href="tel:08140807725" className="hover:text-yellowa">08140807725</a>
+              
+              </div>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <Phone size={16} className="text-yellowa mt-1" />
+              <div className="flex flex-col">
                 <a href="tel:08065603458" className="hover:text-yellowa">08065603458</a>
+              </div>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <Phone size={16} className="text-yellowa mt-1" />
+              <div className="flex flex-col">
                 <a href="tel:08033813154" className="hover:text-yellowa">08033813154</a>
               </div>
             </li>
