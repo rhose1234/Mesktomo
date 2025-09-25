@@ -1,21 +1,36 @@
-import React, { Suspense } from "react";
+import React, { memo } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
 
-// Lazy load Framer Motion
-const motionPromise = import("framer-motion");
-let motion;
-motionPromise.then((mod) => (motion = mod.motion));
-
-// Images (lazy load in <img>)
-import energy from "../assets/energy.png";
-import manufacturing from "../assets/manufacturing.png";
-import retail from "../assets/retail.png";
-import agriculture from "../assets/agriculture.png";
-import health from "../assets/health.png";
-import technology from "../assets/technology.png";
-import automative from "../assets/automative.png";
+// import energy from "../assets/energy.png";
+// import manufacturing from "../assets/manufacturing.png";
+// import retail from "../assets/retail.png";
+// import agriculture from "../assets/agriculture.png";
+// import health from "../assets/health.png";
+// import technology from "../assets/technology.png";
+// import automative from "../assets/automative.png";
 import about from "../assets/about.webp";
+
+const HighlightCard = memo(({ item, card }) => (
+  <motion.div
+    variants={card}
+    whileHover={{ scale: 1.05, rotate: 1 }}
+    whileTap={{ scale: 0.95 }}
+    className="p-6 bg-white rounded-2xl shadow-sm text-center"
+  >
+    <div className="flex justify-center mb-4">{item.icon}</div>
+    <h3 className="font-bold text-base h-8 text-black">{item.title}</h3>
+    <p className="text-gray-600 mt-2 text-base/6">{item.description}</p>
+  </motion.div>
+));
+
+const IndustryCard = memo(({ item }) => (
+  <div className="min-w-[180px] flex flex-col items-center bg-white rounded-2xl shadow-lg p-4 flex-shrink-0">
+    <img src={item.icon} alt={item.name} className="h-8" loading="lazy" />
+    <h3 className="mt-4 font-semibold text-black text-base">{item.name}</h3>
+  </div>
+));
 
 export default function HomePage() {
   const highlights = [
@@ -45,165 +60,174 @@ export default function HomePage() {
     },
   ];
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
+  // const industries = [
+  //   { name: "Manufacturing", icon: manufacturing },
+  //   { name: "Retail", icon: retail },
+  //   { name: "Agriculture", icon: agriculture },
+  //   { name: "Automotive", icon: automative },
+  //   { name: "Energy", icon: energy },
+  //   { name: "Healthcare", icon: health },
+  //   { name: "Technology", icon: technology },
+  // ];
+
+
+  // Framer Motion Variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.25 } },
+  };
+  const card = {
+    hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
-
-  const card = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-  };
-
-  const industries = [
-    { name: "Manufacturing", icon: manufacturing },
-    { name: "Retail", icon: retail },
-    { name: "Agriculture", icon: agriculture },
-    { name: "Automotive", icon: automative },
-    { name: "Energy", icon: energy },
-    { name: "Healthcare", icon: health },
-    { name: "Technology", icon: technology },
-  ];
+  const fadeLeft = { hidden: { opacity: 0, x: -60 }, show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } } };
+  const fadeRight = { hidden: { opacity: 0, x: 60 }, show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } } };
+  const fadeUp = { hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       {/* Hero Section */}
-      {motion && (
-        <section className="HeroSection h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20 bg-greener">
-          <div className="max-w-3xl mx-auto px-6 text-white">
-            <motion.h1
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-              className="font-extrabold text-5xl md:text-6xl leading-tight"
-            >
-              Delivering Excellence in Logistics Solutions
-            </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-              className="text-base mt-2"
-            >
-              As an industry leader, we specialize in providing comprehensive
-              logistics solutions designed to connect businesses, facilitate trade,
-              and empower growth across regional and international markets.
-            </motion.p>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6"
-            >
-              <Link to="/quote">
-                <button className="bg-yellowa text-greener px-8 py-3 rounded-full font-bold hover:bg-brand-greener hover:text-brand-yellowa transition duration-300">
-                  Get a Free Quote
-                </button>
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-      )}
+      <section className="HeroSection h-screen flex justify-center items-center flex-col text-center pt-20 bg-greener">
+        <div className="max-w-3xl mx-auto px-6 text-white">
+          <h1 className="font-extrabold text-5xl md:text-6xl leading-tight">
+            Delivering Excellence in Logistics Solutions
+          </h1>
+          <p className="text-base mt-2">
+            As an industry leader, we specialize in providing comprehensive logistics solutions designed to connect businesses, facilitate trade, and empower growth across regional and international markets.
+          </p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Link to="/quote">
+                          <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
+                            Get a Free Quote
+                          </button>
+                        </Link>
+                      </motion.div>
+        </div>
+      </section>
 
       {/* About Section */}
-      {motion && (
-        <section className="about py-16 bg-transparent">
-          <div className="max-w-6xl mx-auto px-6">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.1 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-black">About Us</h2>
-              <span className="block w-20 h-1 bg-yellowa mx-auto mt-2 rounded-full"></span>
+      <section className="about py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="text-center mb-8">
+            <h2 className="text-4xl font-extrabold text-black mb-2">About Us</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+            <motion.img variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} src={about} alt="About MESKTOMO Logistics" className="rounded-2xl shadow-lg w-full h-full object-cover" loading="lazy" />
+            <motion.div variants={fadeRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+              <p className="text-gray-700 text-base/8 w-full">
+                At <span className="font-bold text-black">MESKTOMO LOGISTICS LIMITED</span>, we are more than just a logistics provider - we are a trusted partner committed to simplifying supply chains and empowering business growth. With a blend of industry expertise and cutting-edge technology, we ensure that every shipment is delivered safely, on time, and cost-effectively.
+              </p>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Link to="/quote">
+                          <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold transition duration-300">
+                           Learn More
+                          </button>
+                        </Link>
+                      </motion.div>
             </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
-              <motion.div
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <img
-                  src={about}
-                  alt="About MESKTOMO Logistics"
-                  className="rounded-2xl shadow-lg w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </motion.div>
-
-              <motion.div
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <p className="text-gray-700 text-base/8 w-full">
-                  At <span className="font-bold text-black">MESKTOMO LOGISTICS LIMITED</span>,
-                  we are more than just a logistics provider - we are a trusted partner committed
-                  to simplifying supply chains and empowering business growth. With a blend of
-                  industry expertise and cutting-edge technology, we ensure every shipment is
-                  delivered safely, on time, and cost-effectively.
-                </p>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="mt-4"
-                >
-                  <Link to="/quote">
-                    <button className="bg-yellowa text-greener px-8 py-3 rounded-full font-semibold hover:bg-brand-greener hover:text-brand-yellowa transition duration-300">
-                      Learn More About Us
-                    </button>
-                  </Link>
-                </motion.div>
-              </motion.div>
-            </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+      {/* Industries Section */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-4xl mx-auto px-6 text-center">
+    {/* Heading */}
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-4xl font-extrabold text-black mb-2"
+    >
+      Industries We Serve
+    </motion.h2>
+
+    {/* Subtext */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true }}
+      className="text-gray-700 text-sm/6 mb-10"
+    >
+      MESKTOMO LOGISTICS LIMITED supports a diverse range of industries
+    </motion.p>
+
+    {/* Buttons with stagger */}
+    <motion.div
+      className="flex flex-wrap justify-center gap-4"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}
+    >
+      {[
+        "Manufacturing and Industrial Goods",
+        "Retail and Consumer Products",
+        "Agriculture and Commodities",
+        "Automotive and Machinery",
+        "Energy and Chemicals",
+        "Pharmaceuticals and Healthcare Equipment",
+        "Technology and Electronics",
+      ].map((industry, index) => (
+        <motion.button
+          key={index}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+          }}
+          className="bg-transparent border-greener border-2 text-base text-greener font-normal px-5 py-3 rounded-full hover:bg-greener hover:text-yellowa transition duration-300"
+        >
+          {industry}
+        </motion.button>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Why Us Section */}
-      {motion && (
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-6">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-black">Why Choose Us</h2>
-              <span className="block w-20 h-1 bg-yellowa mx-auto mt-2 rounded-full"></span>
-            </motion.div>
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-black mb-2">Why Choose Us</h2>
+          </motion.div>
 
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={card}
-                  whileHover={{ scale: 1.05 }}
-                  className="p-6 bg-white rounded-2xl shadow-sm text-center"
-                >
-                  <div className="flex justify-center mb-4">{item.icon}</div>
-                  <h3 className="font-bold text-base h-8 text-black">{item.title}</h3>
-                  <p className="text-gray-600 mt-2 text-base/6">{item.description}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-      )}
-    </Suspense>
+          <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {highlights.map((item, index) => (
+              <HighlightCard key={index} item={item} card={card} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Ready Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 text-center text-black">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="text-4xl font-extrabold text-black mb-2">
+            Ready to Move Your Business Forward?
+          </motion.h2>
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="mt-4 text-base/6 text-black max-w-2xl mx-auto">
+            Whatever your logistics needs are, <span className="font-semibold">MESKTOMO LOGISTICS LIMITED</span> provides the reliability, expertise, and excellent service you deserve.
+          </motion.p>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-8">
+            <Link to="/quote">
+              <button className="bg-yellowa text-greener px-10 py-4 rounded-full font-bold text-base shadow-lg hover:bg-greener hover:text-white transition duration-300">
+                Get a Free Quote
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }

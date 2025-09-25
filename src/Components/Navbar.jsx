@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition duration-300 ${
-        scroll ? "bg-greener shadow-md" : "bg-transparent"
+        scroll ? "scroll shadow-md" : "bg-transparent"
       }`}
     >
       <div className="flex items-center justify-between py-4 px-6 md:px-30">
@@ -67,22 +67,22 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:items-center lg:gap-10">
           <ul className="flex items-center space-x-10 text-white font-semibold">
             <li>
-              <NavLink to="/" className="hover:text-yellowa">
+              <NavLink to="/" className="">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="hover:text-yellowa">
+              <NavLink to="/about" className="">
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-yellowa">
+              <NavLink to="/services" className="">
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className="hover:text-yellowa">
+              <NavLink to="/contact" className="">
                 Contact
               </NavLink>
             </li>
@@ -90,7 +90,7 @@ export default function Navbar() {
           {motion && (
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to="/quote">
-                <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-greener hover:text-yellowa transition duration-300">
+                <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
                   Get a Free Quote
                 </button>
               </Link>
