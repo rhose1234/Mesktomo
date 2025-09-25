@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, Globe } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { FaXTwitter, FaFacebookF, FaInstagram } from "react-icons/fa6"; 
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -36,7 +36,23 @@ export default function Footer() {
         <div>
           <h4 className="text-xl font-bold mb-3">Contact</h4>
           <ul className="space-y-4 text-sm">
-            
+
+            {/* Phone Numbers */}
+            <li className="flex flex-row items-center gap-2">
+              <Phone size={16} className="text-yellowa " />
+                <a href="tel:08140807725" className="hover:text-yellowa">08140807725</a>
+            </li>
+
+            <li className="flex flex-row items-center gap-2">
+               <Phone size={16} className="text-yellowa " />
+                <a href="tel:08065603458" className="hover:text-yellowa">08065603458</a>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <Phone size={16} className="text-yellowa " />
+              <a href="tel:08033813154" className="hover:text-yellowa">08033813154</a>
+            </li>
+
             {/* Email */}
             <li className="flex items-start gap-2">
               <Mail size={16} className="text-yellowa mt-1" />
@@ -47,43 +63,11 @@ export default function Footer() {
               </div>
             </li>
 
-            {/* Website */}
-            <li className="flex items-start gap-2">
-              <Globe size={16} className="text-yellowa mt-1" />
-              <div>
-                <a 
-                  href="http://www.mesktomolog.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="hover:text-yellowa"
-                >
-                  www.mesktomolog.com
-                </a>
-              </div>
-            </li>
-
-            {/* Phone Numbers */}
-            <li className="flex items-start gap-2">
-              <Phone size={16} className="text-yellowa mt-1" />
-              <div className="flex flex-col">
-                <a href="tel:08140807725" className="hover:text-yellowa">08140807725</a>
-              
-              </div>
-            </li>
-
-            <li className="flex items-start gap-2">
-              <Phone size={16} className="text-yellowa mt-1" />
-              <div className="flex flex-col">
-                <a href="tel:08065603458" className="hover:text-yellowa">08065603458</a>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-2">
-              <Phone size={16} className="text-yellowa mt-1" />
-              <div className="flex flex-col">
-                <a href="tel:08033813154" className="hover:text-yellowa">08033813154</a>
-              </div>
-            </li>
+            {/* Address */}
+          <li className="flex flex-row items-center gap-2">
+         <MapPin size={16} className="text-yellowa " />
+         <span>25 Diya Street, Gbagada, Lagos, Nigeria.</span>
+         </li>
           </ul>
         </div>
 
