@@ -90,7 +90,7 @@ export default function Navbar() {
           {motion && (
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to="/quote">
-                <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-semibold hover:bg-greener hover:text-yellowa transition duration-300">
+                <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-greener hover:text-yellowa transition duration-300">
                   Get a Free Quote
                 </button>
               </Link>
