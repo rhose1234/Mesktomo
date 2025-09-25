@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+ --color-yellowa: #DDD53B;
+  --color-greener: #0f2c27; 
+  --color-white: #ffffff;
+  --color-black : #000000;
+ }
+ *{
+font-family: "Open Sans", sans-serif;}
+
+body{
+  overflow-x: hidden;
+}
+nav ul li a.active{
+  color: #DDD53B ;
+}
+.HeroSection{
+  background:  linear-gradient(
+                rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)
+              ), url("./assets/img.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.AboutHero{
+  background:  linear-gradient(
+                rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)
+              ), url("./assets/about.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.scroll{
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
