@@ -240,10 +240,10 @@ export default function Quote() {
                 value={formik.values.transport}
                 className="w-full border p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-greener text-sm"
               >
-                <option>Road</option>
-                <option>Sea</option>
-                <option>Air</option>
-                <option>Rail</option>
+                <option>Van</option>
+                <option>Bus</option>
+                <option>Bike</option>
+                <option>Truck</option>
               </select>
             </div>
 
