@@ -8,6 +8,7 @@ import {
   SearchCheck,
   MapPin,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import WorkflowSection from "../Components/Workflow";
 
 const services = [
@@ -53,24 +54,39 @@ export default function Services() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center  text-white px-6">
-        <h1 className="text-4xl md:text-5xl font-extrabold">Our Core Services</h1>
-        <p className="mt-4 max-w-2xl text-lg">
+      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center text-white px-6">
+        <motion.h1
+          className="text-4xl md:text-5xl font-extrabold"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Our Core Services
+        </motion.h1>
+        <motion.p
+          className="mt-4 max-w-2xl text-base"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
           We offer a wide range of logistics and supply chain solutions designed to
           deliver excellence at every stage of your journey.
-        </p>
+        </motion.p>
       </section>
 
-
       {/* Services Grid */}
-      <section className="max-w-6xl mx-auto mt-10 px-6 py-10"> {/* padding added */}
+      <section className="max-w-6xl mx-auto mt-10 px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-greener">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="group flex flex-col items-start gap-4 p-6 border border-greener transition duration-300 hover:bg-greener hover:text-white"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
               >
                 <Icon className="w-10 h-10 text-greener group-hover:text-white transition duration-300" />
                 <div>
@@ -81,7 +97,7 @@ export default function Services() {
                     {service.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

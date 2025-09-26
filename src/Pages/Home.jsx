@@ -68,12 +68,20 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="HeroSection min-h-screen w-full flex justify-center items-center flex-col text-center overflow-hidden ">
         <div className="max-w-3xl mx-auto px-6 text-white pt-20">
-       <h1 className="font-extrabold text-5xl md:text-6xl leading-tight break-words">
-            Delivering Excellence in Logistics Solutions
-          </h1>
-          <p className="text-base mt-2">
+        <motion.h1
+                className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}  > Delivering Excellence in Logistics Solutions
+            </motion.h1>
+          <motion.p
+            className="mt-4 max-w-2xl text-base"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}>
             As an industry leader, we specialize in providing comprehensive logistics solutions designed to connect businesses, facilitate trade, and empower growth across regional and international markets.
-          </p>
+          </motion.p>
+
           <motion.div 
   whileHover={{ scale: 1.05 }} 
   whileTap={{ scale: 0.95 }} 
@@ -81,9 +89,11 @@ export default function HomePage() {
 >
 
                         <Link to="/quote">
-                          <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
+                          <motion.button initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }} className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
                             Get a Free Quote
-                          </button>
+                          </motion.button>
                         </Link>
                       </motion.div>
         </div>
@@ -103,7 +113,7 @@ export default function HomePage() {
                 At <span className="font-bold text-black">MESKTOMO LOGISTICS LIMITED</span>, we are more than just a logistics provider - we are a trusted partner committed to simplifying supply chains and empowering business growth. With a blend of industry expertise and cutting-edge technology, we ensure that every shipment is delivered safely, on time, and cost-effectively.
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Link to="/quote">
+                        <Link to="/about">
                           <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold transition duration-300">
                            Learn More
                           </button>

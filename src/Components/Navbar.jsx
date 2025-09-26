@@ -79,9 +79,11 @@ export default function Navbar() {
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
+          <Link to="/quote">
         <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
   Get a Free Quote
 </button>
+</Link>
 
         </div>
 

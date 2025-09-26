@@ -1,6 +1,7 @@
 // WorkflowSection.jsx
 import React from "react";
 import { ClipboardList, PhoneCall, FileCheck, Package, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -34,18 +35,28 @@ export default function WorkflowSection() {
   return (
     <section className="pt-10 pb-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-16">
+        <motion.h2
+          className="text-3xl md:text-4xl font-extrabold text-black mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           How We Work
-        </h2>
+        </motion.h2>
 
         {/* Desktop: horizontal chain | Mobile: vertical */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start relative">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="flex flex-col items-center text-center relative md:w-1/5 px-4"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.2 }}
+                viewport={{ once: true }}
               >
                 {/* Circle with icon */}
                 <div className="w-16 h-16 flex items-center justify-center rounded-full bg-greener text-white relative z-10">
@@ -70,7 +81,7 @@ export default function WorkflowSection() {
                   <h3 className="font-bold text-lg mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-600 flex-grow">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

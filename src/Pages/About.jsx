@@ -54,11 +54,21 @@ const industriesLoop = [...industries, ...industries];
       {/* Hero Section */}
       <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20">
         <div className="max-w-3xl mx-auto px-6 text-white">
-          <h1 className="font-extrabold text-5xl md:text-6xl leading-tight">
+          <motion.h1
+                         className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
+                         initial={{ opacity: 0, y: 30 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 1 }} >
         About Us
-          </h1>
-          <p className="text-base mt-2">
-         We are more than just a logistics company, we’re a trusted partner dedicated to simplifying supply chains and driving business growth globally          </p>
+          </motion.h1>
+
+        <motion.p
+              className="mt-4 max-w-2xl text-base"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}>
+         We are more than just a logistics company, we’re a trusted partner dedicated to simplifying supply chains and driving business growth globally 
+         </motion.p>
         
         </div>
       </section>
