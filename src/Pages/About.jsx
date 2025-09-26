@@ -264,8 +264,8 @@ const industriesLoop = [...industries, ...industries];
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12" >
-<section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-6 md:mx-28">
-  <div className="max-w-4xl mx-auto text-center text-white px-6">
+<section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-4 md:mx-28">
+  <div className="max-w-4xl mx-auto text-center text-white px-4">
     <p className="uppercase tracking-widest text-yellowa text-sm mb-2">
       Partner With Us
     </p>
