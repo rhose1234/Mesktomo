@@ -107,7 +107,7 @@ const industriesLoop = [...industries, ...industries];
 
       <section className="pt-10 pb-20  bg-white">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Vision */}
+        {/* Vision  card */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
