@@ -65,15 +65,20 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="HeroSection h-screen w-full flex justify-center items-center flex-col text-center pt-20 bg-greener">
-        <div className="max-w-3xl mx-auto px-6 text-white">
-          <h1 className="font-extrabold text-5xl md:text-6xl leading-tight">
+      <section className="HeroSection min-h-screen w-full flex justify-center items-center flex-col text-center overflow-hidden ">
+        <div className="max-w-3xl mx-auto px-6 text-white pt-20">
+       <h1 className="font-extrabold text-5xl md:text-6xl leading-tight break-words">
             Delivering Excellence in Logistics Solutions
           </h1>
           <p className="text-base mt-2">
             As an industry leader, we specialize in providing comprehensive logistics solutions designed to connect businesses, facilitate trade, and empower growth across regional and international markets.
           </p>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.div 
+  whileHover={{ scale: 1.05 }} 
+  whileTap={{ scale: 0.95 }} 
+  className="inline-block overflow-hidden"
+>
+
                         <Link to="/quote">
                           <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
                             Get a Free Quote
@@ -91,7 +96,7 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
-            <motion.img variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} src="https://i.postimg.cc/SNp6WCSF/about.jpg" alt="About MESKTOMO Logistics" className="rounded-2xl shadow-lg w-full h-full object-cover" loading="lazy" />
+            <motion.img variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} src="https://i.postimg.cc/SNp6WCSF/about.jpg" alt="About MESKTOMO Logistics" className="rounded-2xl shadow-lg w-full object-cover" loading="lazy" />
             <motion.div variants={fadeRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
               <p className="text-gray-700 text-base/8 w-full">
                 At <span className="font-bold text-black">MESKTOMO LOGISTICS LIMITED</span>, we are more than just a logistics provider - we are a trusted partner committed to simplifying supply chains and empowering business growth. With a blend of industry expertise and cutting-edge technology, we ensure that every shipment is delivered safely, on time, and cost-effectively.

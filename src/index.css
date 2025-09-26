@@ -8,14 +8,16 @@
   --color-white: #ffffff;
   --color-black : #000000;
  }
+
  *{
 font-family: "Open Sans", sans-serif;
 text-decoration: none ;
 }
 
-body{
-  overflow-x: hidden !important;
+html, body {
+  overflow-x: hidden;
 }
+
 nav ul li a.active{
   color: #DDD53B ;
 }
@@ -42,6 +44,6 @@ nav ul li a.active{
 
 }
 .scroll{
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  transition: background-color 0.3s ease-in-out !important;
+  background-color: rgba(0, 0, 0, 0.5) ;
+  transition: background-color 0.3s ease-in-out ;
 }

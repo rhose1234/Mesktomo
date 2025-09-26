@@ -52,7 +52,7 @@ const industriesLoop = [...industries, ...industries];
   return (
     <>
       {/* Hero Section */}
-      <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20 bg-greener">
+      <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20">
         <div className="max-w-3xl mx-auto px-6 text-white">
           <h1 className="font-extrabold text-5xl md:text-6xl leading-tight">
         About Us
@@ -95,7 +95,7 @@ const industriesLoop = [...industries, ...industries];
               expertise with cutting-edge technology to ensure your shipments reach their destinations safely,
               timely, and cost-effectively.
             </p>
-            <p className="text-gray-700 text-base/8 text-center">
+            <p className="text-gray-700 text-base/6 text-center">
               Our company integrates best practices in operations, compliance, and customer service, making us
               adaptable to the unique needs of our clients. Whether you’re a multinational corporation or a local
               enterprise, we offer tailor-made solutions to streamline your supply chain and optimize your
@@ -151,50 +151,54 @@ const industriesLoop = [...industries, ...industries];
     </section>
 
       {/* our commitment */}
-      <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Heading */}
+  <section className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+    {/* Section Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3">
+        Our Commitment to Quality and Safety
+      </h2>
+      <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base/6">
+        Quality assurance, safety, and compliance are the cornerstones of our operations.
+        Through continuous improvement and technology, we strive to exceed your expectations
+        in every transaction.
+      </p>
+    </motion.div>
+
+    {/* Grid of Commitments */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {commitments.map((item, index) => (
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          key={index}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-center mb-12" >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3">Our Commitment to Quality and Safety</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base/6">
-            Quality assurance, safety, and compliance are the cornerstones of our operations.
-            Through continuous improvement and technology, we strive to exceed your expectations
-            in every transaction.
-          </p>
+          whileHover={{ scale: 1.05 }} // zoom effect
+          className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500"
+        >
+          {/* Background Image */}
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-64 object-cover"
+          />
+
+          {/* Always-visible Overlay */}
+          <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
+            <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+            <p className="text-white text-sm">{item.description}</p>
+          </div>
         </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
-        {/* Grid of Commitments */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {commitments.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              whileHover={{ scale: 1.02 }}
-              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
-            >
-              {/* Background Image */}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-center px-4">
-                <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-white text-sm">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
 
       {/* trusted by */}
    <section className="pt-16 pb-8  overflow-hidden">
@@ -212,7 +216,7 @@ const industriesLoop = [...industries, ...industries];
 
     {/* First Row (scroll left) */}
     <motion.div
-      className="flex space-x-6 mb-8"
+      className="flex space-x-6 mb-6"
       animate={{ x: ["0%", "-50%"] }}
       transition={{
         ease: "linear",
@@ -232,7 +236,7 @@ const industriesLoop = [...industries, ...industries];
 
     {/* Second Row (scroll right) */}
     <motion.div
-      className="flex space-x-6 mb-8"
+      className="flex space-x-6 mb-6"
       animate={{ x: ["-50%", "0%"] }}
       transition={{
         ease: "linear",
@@ -260,17 +264,17 @@ const industriesLoop = [...industries, ...industries];
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12" >
-<section className="relative py-20 my-20 bg-greener rounded-3xl mx-8 md:mx-28">
+<section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-6 md:mx-28">
   <div className="max-w-4xl mx-auto text-center text-white px-6">
     <p className="uppercase tracking-widest text-yellowa text-sm mb-2">
       Partner With Us
     </p>
 
-    <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+    <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
       Let’s Build the Future of Logistics 
     </h2>
 
-    <p className="text-base/6 mb-8">
+    <p className="mb-8 text-sm md:text-base/6">
       Whatever your logistics needs, MESKTOMO LOGISTICS LIMITED provides the reliability,
       expertise, and service excellence you deserve.
     </p>

@@ -43,11 +43,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition duration-300 ${
         scroll ? "scroll shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between py-4 px-6 md:px-30">
+      <div className="flex items-center justify-between py-4 px-6 md:px-12">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="logo" className="w-12" loading="lazy" />
@@ -67,24 +67,16 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:items-center lg:gap-10">
           <ul className="flex items-center space-x-10 text-white font-semibold">
             <li>
-              <NavLink to="/" className="">
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="">
-                About
-              </NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="">
-                Services
-              </NavLink>
+              <NavLink to="/services">Services</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className="">
-                Contact
-              </NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
           {motion && (
@@ -103,25 +95,46 @@ export default function Navbar() {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ x: "100%" }}
+                initial={{ x: "100%" }} 
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 right-0 w-full h-screen bg-greener flex flex-col items-center justify-center space-y-8 text-white font-semibold lg:hidden z-40"
+                className="fixed top-0 right-0 w-full h-screen bg-greener flex flex-col items-center justify-center space-y-8 text-white font-semibold lg:hidden z-40 overflow-x-hidden"
               >
-                <NavLink to="/" onClick={() => setIsOpen(false)} className="hover:text-yellowa">
+                <NavLink
+                  to="/"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-yellowa"
+                >
                   Home
                 </NavLink>
-                <NavLink to="/about" onClick={() => setIsOpen(false)} className="hover:text-yellowa">
+                <NavLink
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-yellowa"
+                >
                   About
                 </NavLink>
-                <NavLink to="/services" onClick={() => setIsOpen(false)} className="hover:text-yellowa">
+                <NavLink
+                  to="/services"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-yellowa"
+                >
                   Services
                 </NavLink>
-                <NavLink to="/contact" onClick={() => setIsOpen(false)} className="hover:text-yellowa">
+                <NavLink
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-yellowa"
+                >
                   Contact
                 </NavLink>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block overflow-hidden"
+                >
                   <Link to="/quote" onClick={() => setIsOpen(false)}>
                     <button className="bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-greener hover:text-yellowa transition duration-300">
                       Get a Free Quote
