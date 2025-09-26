@@ -9,7 +9,9 @@
   --color-black : #000000;
  }
  *{
-font-family: "Open Sans", sans-serif;}
+font-family: "Open Sans", sans-serif;
+text-decoration: none ;
+}
 
 body{
   overflow-x: hidden;
@@ -21,7 +23,7 @@ nav ul li a.active{
   background:  linear-gradient(
                 rgba(0, 0, 0, 0.6), 
                 rgba(0, 0, 0, 0.6)
-              ), url("./assets/img.webp");
+              ), url("https://i.postimg.cc/SNrMCP1C/img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +33,7 @@ nav ul li a.active{
   background:  linear-gradient(
                 rgba(0, 0, 0, 0.6), 
                 rgba(0, 0, 0, 0.6)
-              ), url("./assets/about.webp");
+              ), url("https://i.postimg.cc/SNp6WCSF/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

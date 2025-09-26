@@ -66,7 +66,7 @@ export default function Footer() {
             {/* Address */}
           <li className="flex flex-row items-center gap-2">
          <MapPin size={16} className="text-yellowa " />
-         <span>25 Diya Street, Gbagada, Lagos, Nigeria.</span>
+         <a href="https://maps.app.goo.gl/bZBxdeaAdbqFWzq1A" className="hover:text-yellowa">25 Diya Street, Gbagada, Lagos, Nigeria.</a>
          </li>
           </ul>
         </div>

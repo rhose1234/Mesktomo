@@ -3,14 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
 
-// import energy from "../assets/energy.png";
-// import manufacturing from "../assets/manufacturing.png";
-// import retail from "../assets/retail.png";
-// import agriculture from "../assets/agriculture.png";
-// import health from "../assets/health.png";
-// import technology from "../assets/technology.png";
-// import automative from "../assets/automative.png";
-import about from "../assets/about.webp";
+
 
 const HighlightCard = memo(({ item, card }) => (
   <motion.div
@@ -25,12 +18,6 @@ const HighlightCard = memo(({ item, card }) => (
   </motion.div>
 ));
 
-const IndustryCard = memo(({ item }) => (
-  <div className="min-w-[180px] flex flex-col items-center bg-white rounded-2xl shadow-lg p-4 flex-shrink-0">
-    <img src={item.icon} alt={item.name} className="h-8" loading="lazy" />
-    <h3 className="mt-4 font-semibold text-black text-base">{item.name}</h3>
-  </div>
-));
 
 export default function HomePage() {
   const highlights = [
@@ -60,16 +47,7 @@ export default function HomePage() {
     },
   ];
 
-  // const industries = [
-  //   { name: "Manufacturing", icon: manufacturing },
-  //   { name: "Retail", icon: retail },
-  //   { name: "Agriculture", icon: agriculture },
-  //   { name: "Automotive", icon: automative },
-  //   { name: "Energy", icon: energy },
-  //   { name: "Healthcare", icon: health },
-  //   { name: "Technology", icon: technology },
-  // ];
-
+  
 
   // Framer Motion Variants
   const container = {
@@ -113,7 +91,7 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
-            <motion.img variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} src={about} alt="About MESKTOMO Logistics" className="rounded-2xl shadow-lg w-full h-full object-cover" loading="lazy" />
+            <motion.img variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} src="https://i.postimg.cc/SNp6WCSF/about.jpg" alt="About MESKTOMO Logistics" className="rounded-2xl shadow-lg w-full h-full object-cover" loading="lazy" />
             <motion.div variants={fadeRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
               <p className="text-gray-700 text-base/8 w-full">
                 At <span className="font-bold text-black">MESKTOMO LOGISTICS LIMITED</span>, we are more than just a logistics provider - we are a trusted partner committed to simplifying supply chains and empowering business growth. With a blend of industry expertise and cutting-edge technology, we ensure that every shipment is delivered safely, on time, and cost-effectively.
