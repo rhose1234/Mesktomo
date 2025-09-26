@@ -65,7 +65,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="HeroSection h-screen flex justify-center items-center flex-col text-center pt-20 bg-greener">
+      <section className="HeroSection h-screen w-full flex justify-center items-center flex-col text-center pt-20 bg-greener">
         <div className="max-w-3xl mx-auto px-6 text-white">
           <h1 className="font-extrabold text-5xl md:text-6xl leading-tight">
             Delivering Excellence in Logistics Solutions

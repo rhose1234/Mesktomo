@@ -14,7 +14,7 @@ text-decoration: none ;
 }
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 nav ul li a.active{
   color: #DDD53B ;
@@ -27,6 +27,7 @@ nav ul li a.active{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
 
 }
 .AboutHero{
@@ -37,6 +38,7 @@ nav ul li a.active{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
 
 }
 .scroll{
