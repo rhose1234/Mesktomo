@@ -21,7 +21,7 @@ $date = htmlspecialchars($data['date']);
 $notes = htmlspecialchars($data['notes']);
 
 $to = "sales@mesktomolog.com"; 
-$subject = "New Quote Request from $name";
+$subject = "🚚 New Quote Request from $name";
 
 $message = "
 You have a new quote request:
@@ -43,8 +43,8 @@ $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 if (mail($to, $subject, $message, $headers)) {
-    echo json_encode(["success" => true, "message" => "Email sent"]);
+    echo json_encode(["success" => true, "message" => "Quote email sent"]);
 } else {
-    echo json_encode(["success" => false, "message" => "Email failed"]);
+    echo json_encode(["success" => false, "message" => "Quote email failed"]);
 }
 ?>
