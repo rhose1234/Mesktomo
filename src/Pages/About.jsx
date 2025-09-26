@@ -281,9 +281,7 @@ const industriesLoop = [...industries, ...industries];
 
     <a
       href="mailto:sales@mesktomolog.com"
-      className="bg-yellowa text-greener px-8 py-3 rounded-full font-bold 
-                 hover:bg-white hover:text-greener transition duration-300"
-    >
+      className="bg-yellowa text-greener px-8 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300" >
       Email Us Today
     </a>
   </div>

@@ -47,7 +47,7 @@ export default function Navbar() {
         scroll ? "scroll shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between py-4 px-6 md:px-12">
+      <div className="flex items-center justify-between py-4 px-6 md:px-28">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="logo" className="w-12" loading="lazy" />
@@ -64,7 +64,7 @@ export default function Navbar() {
         </Suspense>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex lg:items-center lg:gap-10">
+        <div className="hidden lg:flex lg:items-center lg:gap-10 ">
           <ul className="flex items-center space-x-10 text-white font-semibold">
             <li>
               <NavLink to="/">Home</NavLink>
@@ -79,15 +79,10 @@ export default function Navbar() {
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
-          {motion && (
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link to="/quote">
-                <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
-                  Get a Free Quote
-                </button>
-              </Link>
-            </motion.div>
-          )}
+        <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
+  Get a Free Quote
+</button>
+
         </div>
 
         {/* Mobile Nav */}

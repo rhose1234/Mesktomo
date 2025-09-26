@@ -21,6 +21,23 @@ html, body {
 nav ul li a.active{
   color: #DDD53B ;
 }
+
+ 
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #DDD53B !important; 
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #DDD53B !important; 
+  opacity: 1;
+}
+
 .HeroSection{
   background:  linear-gradient(
                 rgba(0, 0, 0, 0.6), 
@@ -41,6 +58,26 @@ nav ul li a.active{
   background-size: cover;
   width: 100vw;
 
+}
+.servicesHero{
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)
+              ), url("https://i.postimg.cc/kGZ5BDr6/warehouse-manager-calling-logistics-office-asking-about-inventory-report-african-american-storehouse.jpg");
+                background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+.contactHero{
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)
+              ),url("https://i.postimg.cc/5NMLkv3b/call-center-worker-office-using-ai-chatbot-reply-customers.jpg");
+                        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
 }
 .scroll{
   background-color: rgba(0, 0, 0, 0.5) ;

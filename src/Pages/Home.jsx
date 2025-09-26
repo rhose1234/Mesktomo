@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
+import TestimonialSection from "../Components/testimonials";
 
 
 
@@ -193,6 +194,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<TestimonialSection />
       {/* Ready Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 text-center text-black">
