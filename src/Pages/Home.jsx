@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
 import TestimonialSection from "../Components/testimonials";
+import Flow from "../Components/flow";
 
 const HighlightCard = memo(({ item, card }) => (
   <motion.div
@@ -169,7 +170,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Industries Section */}
+       {/* Industries Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           {/* Heading */}
@@ -233,6 +234,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* Why Us Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -261,6 +263,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      
+      <Flow/>
 
       <TestimonialSection />
       {/* Ready Section */}

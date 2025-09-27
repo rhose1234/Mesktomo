@@ -50,7 +50,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between py-4 px-6 md:px-28">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="logo" className="w-12" loading="lazy" />
+          <img src={logo} alt="logo" className="w-20" loading="lazy" />
         </Link>
 
         {/* Mobile toggle */}

@@ -4,22 +4,30 @@ import { motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-// ✅ Validation schema
-const ContactSchema = Yup.object().shape({
+// ✅ Validation schemas
+const IndividualSchema = Yup.object().shape({
   name: Yup.string().required("Full name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  message: Yup.string().required("Message is required"),
+});
+
+const CompanySchema = Yup.object().shape({
+  companyName: Yup.string().required("Company name is required"),
+  contactPerson: Yup.string().required("Contact person is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   message: Yup.string().required("Message is required"),
 });
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState(null);
+  const [formType, setFormType] = useState("individual"); // default
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const response = await fetch("https://mesktomolog.com/contact.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, formType }),
       });
 
       if (response.ok) {
@@ -28,7 +36,7 @@ export default function Contact() {
       } else {
         setFormStatus({
           type: "error",
-          text: "Failed to send message. Please try again!.",
+          text: "Failed to send message. Please try again.",
         });
       }
     } catch (error) {
@@ -38,31 +46,29 @@ export default function Contact() {
       });
     }
 
-    // Auto-hide message after 5s
     setTimeout(() => setFormStatus(null), 5000);
   };
 
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="contactHero relative h-screen flex items-center justify-center bg-cover bg-center">
-        <div className="relative text-center text-white px-6">
+      <section className="contactHero relative h-screen flex items-end justify-center bg-cover bg-center">
+        <div className="relative text-center text-white px-6 bg-greener py-8">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Contact Us
+            Talk to us
           </motion.h1>
-
           <motion.p
-            className="mt-4 max-w-2xl text-base"
+            className="mt-2 max-w-2xl text-base"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Reach out to us for inquiries, quotes, or partnership opportunities.
+            Reach out for inquiries, quotes, or partnership opportunities.
           </motion.p>
         </div>
       </section>
@@ -80,7 +86,7 @@ export default function Contact() {
             <p className="text-gray-700 mb-4 text-base/6">
               At MESKTOMO LOGISTICS LIMITED, we’re always ready to assist with
               your logistics needs. Contact us via phone, email, or the form and
-              we’ll get back to you as soon as possible.
+              we’ll respond as soon as possible.
             </p>
             <ul className="space-y-4 text-gray-800">
               <li>
@@ -112,26 +118,89 @@ export default function Contact() {
               Send Us a Message
             </h3>
 
+            {/* Toggle between Individual / Company */}
+            <div className="flex mb-6 space-x-4">
+              <button
+                onClick={() => setFormType("individual")}
+                className={`px-4 py-2 rounded-lg font-bold ${
+                  formType === "individual"
+                    ? "bg-greener text-white"
+                    : "bg-gray-200 text-gray-700"
+                }`}
+              >
+                Individual
+              </button>
+              <button
+                onClick={() => setFormType("company")}
+                className={`px-4 py-2 rounded-lg font-bold ${
+                  formType === "company"
+                    ? "bg-greener text-white"
+                    : "bg-gray-200 text-gray-700"
+                }`}
+              >
+                Company
+              </button>
+            </div>
+
             <Formik
-              initialValues={{ name: "", email: "", message: "" }}
-              validationSchema={ContactSchema}
+              initialValues={
+                formType === "company"
+                  ? { companyName: "", contactPerson: "", email: "", message: "" }
+                  : { name: "", email: "", message: "" }
+              }
+              validationSchema={
+                formType === "company" ? CompanySchema : IndividualSchema
+              }
               onSubmit={handleSubmit}
+              enableReinitialize
             >
               {({ isSubmitting }) => (
                 <Form className="space-y-6">
-                  <div>
-                    <Field
-                      type="text"
-                      name="name"
-                      placeholder="Enter your full name"
-                      className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
-                    />
-                    <ErrorMessage
-                      name="name"
-                      component="p"
-                      className="text-red-500 text-sm mt-1"
-                    />
-                  </div>
+                  {formType === "company" ? (
+                    <>
+                      <div>
+                        <Field
+                          type="text"
+                          name="companyName"
+                          placeholder="Enter your company name"
+                          className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
+                        />
+                        <ErrorMessage
+                          name="companyName"
+                          component="p"
+                          className="text-red-500 text-sm mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Field
+                          type="text"
+                          name="contactPerson"
+                          placeholder="Contact person full name"
+                          className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
+                        />
+                        <ErrorMessage
+                          name="contactPerson"
+                          component="p"
+                          className="text-red-500 text-sm mt-1"
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <div>
+                      <Field
+                        type="text"
+                        name="name"
+                        placeholder="Enter your full name"
+                        className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
+                      />
+                      <ErrorMessage
+                        name="name"
+                        component="p"
+                        className="text-red-500 text-sm mt-1"
+                      />
+                    </div>
+                  )}
+
                   <div>
                     <Field
                       type="email"
@@ -145,6 +214,7 @@ export default function Contact() {
                       className="text-red-500 text-sm mt-1"
                     />
                   </div>
+
                   <div>
                     <Field
                       as="textarea"

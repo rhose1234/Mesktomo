@@ -47,7 +47,7 @@ nav ul li a.active {
 }
 .AboutHero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://i.postimg.cc/SNp6WCSF/about.jpg");
+    url("https://i.postimg.cc/zvb1kH0R/fleet-trucks-bus-clear-day.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,8 +62,8 @@ nav ul li a.active {
   width: 100vw;
 }
 .contactHero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://i.postimg.cc/5NMLkv3b/call-center-worker-office-using-ai-chatbot-reply-customers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://i.postimg.cc/sxFTtB39/A-close-up-of-a-white-fabric-v-flag-waving-in-the-wind-behind-realistic-folds-and-shadows-The-flag.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

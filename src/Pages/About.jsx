@@ -58,7 +58,7 @@ export default function About() {
           </motion.h1>
 
           <motion.p
-            className="mt-4 max-w-2xl text-base"
+            className="mt-2 max-w-2xl text-base"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
