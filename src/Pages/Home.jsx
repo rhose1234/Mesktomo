@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
 import TestimonialSection from "../Components/testimonials";
-import Flow from "../Components/flow";
+import Flow from "../Components/Flow";
 
 const HighlightCard = memo(({ item, card }) => (
   <motion.div
