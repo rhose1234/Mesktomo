@@ -1,95 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
-
 @theme {
- --color-yellowa: #DDD53B;
-  --color-greener: #0f2c27; 
+  --color-yellowa: #ddd53b;
+  --color-greener: #0f2c27;
   --color-white: #ffffff;
-  --color-black : #000000;
- }
-
- *{
-font-family: "Open Sans", sans-serif;
-text-decoration: none ;
+  --color-black: #000000;
 }
 
-html, body {
+* {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
-nav ul li a.active{
-  color: #DDD53B ;
+nav ul li a.active {
+  color: #ddd53b;
 }
 
- 
 .swiper-pagination {
   margin-top: 20px;
   position: relative !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: #DDD53B !important; 
+  background-color: #ddd53b !important;
   opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #DDD53B !important; 
+  background-color: #ddd53b !important;
   opacity: 1;
 }
 
-.HeroSection{
-  background:  linear-gradient(
-                rgba(0, 0, 0, 0.6), 
-                rgba(0, 0, 0, 0.6)
-              ), url("https://i.postimg.cc/SNrMCP1C/img.jpg"); 
+.HeroSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.postimg.cc/SNrMCP1C/img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
 }
-.AboutHero{
-  background:  linear-gradient(
-                rgba(0, 0, 0, 0.6), 
-                rgba(0, 0, 0, 0.6)
-              ), url("https://i.postimg.cc/SNp6WCSF/about.jpg");
+.AboutHero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.postimg.cc/SNp6WCSF/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-
 }
-.servicesHero{
-  background: linear-gradient(
-                rgba(0, 0, 0, 0.6), 
-                rgba(0, 0, 0, 0.6)
-              ), url("https://i.postimg.cc/kGZ5BDr6/warehouse-manager-calling-logistics-office-asking-about-inventory-report-african-american-storehouse.jpg");
-                background-position: center;
+.servicesHero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.postimg.cc/kGZ5BDr6/warehouse-manager-calling-logistics-office-asking-about-inventory-report-african-american-storehouse.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
 }
-.contactHero{
-  background: linear-gradient(
-                rgba(0, 0, 0, 0.6), 
-                rgba(0, 0, 0, 0.6)
-              ),url("https://i.postimg.cc/5NMLkv3b/call-center-worker-office-using-ai-chatbot-reply-customers.jpg");
-                        background-position: center;
+.contactHero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.postimg.cc/5NMLkv3b/call-center-worker-office-using-ai-chatbot-reply-customers.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw; 
+  width: 100vw;
 }
-.quoteHero{
-  background: linear-gradient(
-                rgba(0, 0, 0, 0.6), 
-                rgba(0, 0, 0, 0.6)
-              ), url("https://i.postimg.cc/brZ7VsqP/transport-logistics-concept-1.jpg");
-                                      background-position: center;
+.quoteHero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.postimg.cc/brZ7VsqP/transport-logistics-concept-1.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw; 
+  width: 100vw;
 }
-.scroll{
-  background-color: rgba(0, 0, 0, 0.5) ;
-  transition: background-color 0.3s ease-in-out ;
+.scroll {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-in-out;
 }

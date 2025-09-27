@@ -1,23 +1,32 @@
 // WorkflowSection.jsx
 import React from "react";
-import { ClipboardList, PhoneCall, FileCheck, Package, MapPin } from "lucide-react";
+import {
+  ClipboardList,
+  PhoneCall,
+  FileCheck,
+  Package,
+  MapPin,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const steps = [
   {
     title: "Request a Quote",
     icon: ClipboardList,
-    description: "Fill out our form or reach out to request a tailored logistics quote.",
+    description:
+      "Fill out our form or reach out to request a tailored logistics quote.",
   },
   {
     title: "We Contact You",
     icon: PhoneCall,
-    description: "Our team gets in touch to confirm details and understand your needs.",
+    description:
+      "Our team gets in touch to confirm details and understand your needs.",
   },
   {
     title: "Documentation",
     icon: FileCheck,
-    description: "We prepare all necessary permits, paperwork, and compliance checks.",
+    description:
+      "We prepare all necessary permits, paperwork, and compliance checks.",
   },
   {
     title: "Pickup & Handling",
@@ -27,7 +36,8 @@ const steps = [
   {
     title: "Delivery Done",
     icon: MapPin,
-    description: "Goods are delivered on time with full transparency and updates.",
+    description:
+      "Goods are delivered on time with full transparency and updates.",
   },
 ];
 
@@ -79,7 +89,9 @@ export default function WorkflowSection() {
                 {/* Title + description (aligned height) */}
                 <div className="mt-6 flex flex-col h-32">
                   <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-600 flex-grow">{step.description}</p>
+                  <p className="text-sm text-gray-600 flex-grow">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             );

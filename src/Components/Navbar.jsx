@@ -80,11 +80,10 @@ export default function Navbar() {
             </li>
           </ul>
           <Link to="/quote">
-        <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
-  Get a Free Quote
-</button>
-</Link>
-
+            <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
+              Get a Free Quote
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Nav */}
@@ -92,7 +91,7 @@ export default function Navbar() {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ x: "100%" }} 
+                initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.3 }}

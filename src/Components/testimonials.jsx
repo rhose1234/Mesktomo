@@ -8,7 +8,8 @@ const testimonials = [
   {
     name: " Mr David",
     role: "Business Owner",
-    image: "https://i.postimg.cc/qRMzz9FK/Whats-App-Image-2025-09-26-at-10-45-48-3f0f6e9e.jpg",
+    image:
+      "https://i.postimg.cc/qRMzz9FK/Whats-App-Image-2025-09-26-at-10-45-48-3f0f6e9e.jpg",
     text: "In an industry where reliability is everything, Mesktomo Logistics Limited delivers on their promises and gives you peace of mind that your goods are in safe hands. I have full confidence in recommending their services to anyone in need of a trusted logistics partner. This is a company built on integrity, dedication, and results ",
   },
   {
@@ -35,7 +36,9 @@ export default function TestimonialSection() {
   return (
     <section className="py-16 ">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-black mb-8">Our Testimonials</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">
+          Our Testimonials
+        </h2>
 
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -58,7 +61,9 @@ export default function TestimonialSection() {
                 />
                 <h3 className="font-bold text-base">{t.name}</h3>
                 <p className="text-sm text-gray-500">{t.role}</p>
-                <p className="mt-3 text-gray-700 text-sm/6 italic">"{t.text}"</p>
+                <p className="mt-3 text-gray-700 text-sm/6 italic">
+                  "{t.text}"
+                </p>
               </div>
             </SwiperSlide>
           ))}

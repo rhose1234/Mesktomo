@@ -69,8 +69,8 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          We offer a wide range of logistics and supply chain solutions designed to
-          deliver excellence at every stage of your journey.
+          We offer a wide range of logistics and supply chain solutions designed
+          to deliver excellence at every stage of your journey.
         </motion.p>
       </section>
 

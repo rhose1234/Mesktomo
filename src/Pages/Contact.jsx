@@ -12,7 +12,7 @@ const ContactSchema = Yup.object().shape({
 });
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState(null); 
+  const [formStatus, setFormStatus] = useState(null);
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
@@ -84,8 +84,8 @@ export default function Contact() {
             </p>
             <ul className="space-y-4 text-gray-800">
               <li>
-                <span className="font-bold">Phone:</span>{" "}
-                08140807725, 08065603458, 08033813154
+                <span className="font-bold">Phone:</span> 08140807725,
+                08065603458, 08033813154
               </li>
               <li>
                 <span className="font-bold">Email:</span> sales@mesktomolog.com

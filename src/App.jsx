@@ -14,16 +14,16 @@ export default function App() {
   return (
     <>
       <Navbar />
-     
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/terms" element={<TermsPage/>} />
-        </Routes>
-    
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/quote" element={<Quote />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<TermsPage />} />
+      </Routes>
+
       <Footer />
     </>
   );
