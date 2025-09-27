@@ -77,7 +77,8 @@ export default function Quote() {
             transition={{ duration: 1 }}
           >
             Request a Free Quote
-          </motion.h1>
+          </motion.h1> 
+          
           <motion.p
             className="mt-2 max-w-2xl text-base"
             initial={{ opacity: 0, y: 30 }}
