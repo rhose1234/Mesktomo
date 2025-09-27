@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="contactHero relative h-screen flex items-end justify-center bg-cover bg-center">
+      <section className="contactHero relative h-screen flex items-end justify-center inset-0 w-full object-cover bg-center">
         <div className="relative text-center text-white px-6 bg-greener py-8">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"

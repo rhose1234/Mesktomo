@@ -13,9 +13,8 @@ export default function Footer() {
           <Link to="/" className="flex items-center">
             <img src={logo} alt="logo" className="w-20" />
           </Link>
-          <p className="mt-3 text-sm/6 text-white">
-            Delivering Excellence in Logistics Solutions. Your trusted partner
-            in supply chain and logistics management.
+          <p className="mt-3 text-sm/6 text-white"> Efficient, time-bound logistics that impacts your business growth | 
+            Delivering Excellence in Logistics Solutions.
           </p>
         </div>
 
@@ -108,7 +107,7 @@ export default function Footer() {
           <h4 className="text-xl font-bold mb-3">Follow Us</h4>
           <div className="flex gap-4">
             <a
-              href="https://x.com/mesktomolog"
+              href="https://x.com/MESKTOMOLOG"
               target="_blank"
               rel="noreferrer"
               className="hover:text-yellowa"
@@ -116,7 +115,7 @@ export default function Footer() {
               <FaXTwitter size={20} />
             </a>
             <a
-              href="https://instagram.com/mesktomolog"
+              href="https://www.instagram.com/mesktomolog/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-yellowa"
