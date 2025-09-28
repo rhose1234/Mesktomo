@@ -68,7 +68,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Reach out for inquiries, quotes, or partnership opportunities.
+            Reach out for inquiries, quotes, or partnership opportunities
           </motion.p>
         </div>
       </section>
