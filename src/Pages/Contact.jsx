@@ -162,7 +162,7 @@ export default function Contact() {
                         <Field
                           type="text"
                           name="companyName"
-                          placeholder="Enter your company name"
+                          placeholder="Enter your company's name"
                           className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
                         />
                         <ErrorMessage
@@ -175,7 +175,7 @@ export default function Contact() {
                         <Field
                           type="text"
                           name="contactPerson"
-                          placeholder="Contact person full name"
+                          placeholder="Contact person name"
                           className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
                         />
                         <ErrorMessage
@@ -205,7 +205,7 @@ export default function Contact() {
                     <Field
                       type="email"
                       name="email"
-                      placeholder="Enter your email"
+                      placeholder="Enter email"
                       className="w-full border border-gray-300 text-sm rounded-lg px-4 py-3 focus:ring-2 focus:ring-greener focus:outline-none"
                     />
                     <ErrorMessage
