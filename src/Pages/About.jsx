@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import OurTeam from "../Components/Team";
 
 export default function About() {
   const industries = [
@@ -215,6 +216,7 @@ export default function About() {
         </div>
       </section>
 
+<OurTeam />
       {/* trusted by */}
       <section className="pt-16 pb-8  overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
