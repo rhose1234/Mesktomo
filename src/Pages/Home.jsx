@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Boxes, Cpu, Globe2, BadgeCheck } from "lucide-react";
 import TestimonialSection from "../Components/testimonials";
 import Flow from "../Components/Flow";
+import Blogs from "../Components/Blogs";
 
 const HighlightCard = memo(({ item, card }) => (
   <motion.div
@@ -268,6 +269,8 @@ export default function HomePage() {
       <Flow/>
 
       <TestimonialSection />
+
+      <Blogs />
       {/* Ready Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 text-center text-black">

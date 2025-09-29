@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "Marios Minas",
     role: "",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    image: "",
     text: "At the core of everything when it's comes to Logistics, Mesktomo Logistics Limited is the go to Name and Trusted Brand you can count on. If you want safe conveyance of goods , then they are your go to  Logistics Partner."
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
   {
     name: "Marios Minas",
     role: "",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    image: "",
     text: "At the core of everything when it's comes to Logistics, Mesktomo Logistics Limited is the go to Name and Trusted Brand you can count on. If you want safe conveyance of goods , then they are your go to  Logistics Partner."
   },
   {

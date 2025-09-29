@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import HomePage from "./Pages/Home";
 import TermsPage from "./Pages/Terms";
 
+
 export default function App() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/quote" element={<Quote />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<TermsPage />} />
+       
       </Routes>
 
       <Footer />

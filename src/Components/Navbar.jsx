@@ -2,6 +2,10 @@ import React, { useState, useEffect, Suspense } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
+import { HashLink } from "react-router-hash-link";
+
+
+
 // Lazy-load Framer Motion
 const motionPromise = import("framer-motion");
 let motion, AnimatePresence;
@@ -73,11 +77,19 @@ export default function Navbar() {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/services">Services</NavLink>
+             
+<HashLink smooth to="/#blogs" className="hover:text-yellowa">
+  Blogs
+</HashLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
             </li>
+            <li>
+              <NavLink to="/services">Services</NavLink>
+            </li>
+            
+            
           </ul>
           <Link to="/quote">
             <button className="ml-6 bg-yellowa text-greener px-6 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300">
@@ -111,6 +123,25 @@ export default function Navbar() {
                 >
                   About
                 </NavLink>
+
+                
+<HashLink 
+onClick={() => setIsOpen(false)}
+smooth to="/#blogs" 
+className="hover:text-yellowa">
+  Blogs
+</HashLink>
+
+                 <NavLink
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-yellowa"
+                >
+                  Contact
+                </NavLink>
+
+                
+
                 <NavLink
                   to="/services"
                   onClick={() => setIsOpen(false)}
@@ -118,13 +149,7 @@ export default function Navbar() {
                 >
                   Services
                 </NavLink>
-                <NavLink
-                  to="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-yellowa"
-                >
-                  Contact
-                </NavLink>
+               
 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
