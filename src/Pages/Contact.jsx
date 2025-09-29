@@ -18,6 +18,8 @@ const CompanySchema = Yup.object().shape({
   message: Yup.string().required("Message is required"),
 });
 
+
+
 export default function Contact() {
   const [formStatus, setFormStatus] = useState(null);
   const [formType, setFormType] = useState("individual"); // default
@@ -49,40 +51,50 @@ export default function Contact() {
     setTimeout(() => setFormStatus(null), 5000);
   };
 
+    const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
-     <section className="relative h-[calc(100vh-64px)] md:h-screen w-full flex items-end justify-center overflow-hidden">
-  {/* Background Image */}
-  <img
-    src="https://i.postimg.cc/fRtQ9sdg/reduce-the-size-of-the-text-here-and-the-size-of-flag-too.jpg"
-    alt="Mesktomo Logistics flag"
-    className="absolute inset-0 w-full h-full object-cover"
-  />
+   <section className="relative h-[calc(80vh-64px)]  pt-20 md:h-screen w-full flex items-center justify-center bg-greener px-0 md:px-6">
+  {/* Wrapper */}
+  <div className="flex flex-col md:flex-row items-center gap-8 max-w-6xl w-full md:pt-20 pt-0">
+    
+    {/* Flag Image */}
+    <img
+      src="https://i.postimg.cc/fRtQ9sdg/reduce-the-size-of-the-text-here-and-the-size-of-flag-too.jpg"
+      alt="About MESKTOMO Logistics"
+      className="rounded-none md:rounded:xl shadow-lg w-full md:w-1/2 object-cover"
+    />
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/20" />
+    {/* Text Content */}
+    <div className="text-center md:text-left text-white max-w-2xl px-4 md:px-0">
+      <motion.h1
+        className="text-3xl md:text-6xl font-extrabold leading-tight break-words"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Talk to us
+      </motion.h1>
 
-  {/* Content */}
-  <div className="bg-greener relative text-center text-white px-6 py-8">
-    <motion.h1
-      className="text-3xl md:text-6xl font-extrabold leading-tight break-words"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
-      Talk to us
-    </motion.h1>
-    <motion.p
-      className="mt-2 max-w-2xl text-base mx-auto"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.3 }}
-    >
-      Reach out for inquiries, quotes, or partnership opportunities
-    </motion.p>
+      <motion.p
+        className="mt-4 text-base md:text-lg"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        Reach out for inquiries, quotes, or partnership opportunities
+      </motion.p>
+    </div>
   </div>
 </section>
+
+
+     
 
 
       {/* Contact Info + Form */}
@@ -120,7 +132,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <motion.div
-            className="bg-white shadow-lg rounded-2xl p-8"
+            className="bg-white shadow-lg rounded-2xl p-8 w-full"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}

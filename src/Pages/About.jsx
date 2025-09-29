@@ -73,20 +73,38 @@ export default function About() {
 
       {/* About Section */}
       <section className="pt-20 pb-10 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-row-1 md:grid-row-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-6 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
           {/* Image */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <img
-              src="https://i.postimg.cc/hvKGGDBw/teamwork.jpg"
-              alt="About MESKTOMO Logistics"
-              className="rounded-xl shadow-lg w-full h-80 object-cover"
-            />
-          </motion.div>
+         <motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.3 }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-4"
+>
+  {/* Left Column (Single Image) */}
+  <div>
+    <img
+      src="https://i.postimg.cc/j5NBQDp7/transport-logistics-concept-1.jpg"
+      alt="About MESKTOMO Logistics"
+      className="rounded-xl shadow-lg w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Right Column (Two Images stacked) */}
+  <div className="grid grid-rows-2 gap-4">
+    <img
+      src="https://i.postimg.cc/CMJpvqZP/A-professional-logistics-image-featuring-three-modern-trucks-with-large-shipping-containers-The-tru.jpg"
+      alt="About MESKTOMO Logistics"
+      className="rounded-xl shadow-lg w-full h-full object-cover"
+    />
+    <img
+      src="https://i.postimg.cc/FHDWjy1W/fleet-trucks-bus-clear-day.jpg"
+      alt="About MESKTOMO Logistics"
+      className="rounded-xl shadow-lg w-full h-full object-cover"
+    />
+  </div>
+</motion.div>
 
           {/* Text */}
           <motion.div

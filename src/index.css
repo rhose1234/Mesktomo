@@ -40,11 +40,14 @@ nav ul li a.active {
 .HeroSection {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://i.postimg.cc/SNrMCP1C/img.jpg");
-  background-position: center;
+  background-position: center;   /* Default for desktop */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;        /* Fills screen */
   width: 100vw;
+  height: 100vh;
 }
+
+
 .AboutHero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://i.postimg.cc/zvb1kH0R/fleet-trucks-bus-clear-day.jpg");
@@ -81,3 +84,10 @@ nav ul li a.active {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease-in-out;
 }
+
+/* @media (max-width: 768px) {
+  .HeroSection {
+    background-size: cover; 
+    background-position:  center;
+  }
+} */
