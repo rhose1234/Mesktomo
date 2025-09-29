@@ -61,14 +61,14 @@ nav ul li a.active {
   background-size: cover;
   width: 100vw;
 }
-.contactHero {
+/* .contactHero {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("https://i.postimg.cc/sxFTtB39/A-close-up-of-a-white-fabric-v-flag-waving-in-the-wind-behind-realistic-folds-and-shadows-The-flag.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-}
+} */
 .quoteHero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://i.postimg.cc/brZ7VsqP/transport-logistics-concept-1.jpg");

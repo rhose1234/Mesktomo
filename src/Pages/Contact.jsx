@@ -52,26 +52,38 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="contactHero relative h-screen flex items-end justify-center inset-0 w-full object-cover bg-center">
-        <div className="relative text-center text-white px-6 bg-greener py-8">
-          <motion.h1
-            className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Talk to us
-          </motion.h1>
-          <motion.p
-            className="mt-2 max-w-2xl text-base"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            Reach out for inquiries, quotes, or partnership opportunities
-          </motion.p>
-        </div>
-      </section>
+     <section className="relative h-[calc(100vh-64px)] md:h-screen w-full flex items-end justify-center overflow-hidden">
+  {/* Background Image */}
+  <img
+    src="https://i.postimg.cc/fRtQ9sdg/reduce-the-size-of-the-text-here-and-the-size-of-flag-too.jpg"
+    alt="Mesktomo Logistics flag"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/20" />
+
+  {/* Content */}
+  <div className="bg-greener relative text-center text-white px-6 py-8">
+    <motion.h1
+      className="text-3xl md:text-6xl font-extrabold leading-tight break-words"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      Talk to us
+    </motion.h1>
+    <motion.p
+      className="mt-2 max-w-2xl text-base mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
+    >
+      Reach out for inquiries, quotes, or partnership opportunities
+    </motion.p>
+  </div>
+</section>
+
 
       {/* Contact Info + Form */}
       <section className="py-20 px-6 md:px-28 bg-gray-50">
