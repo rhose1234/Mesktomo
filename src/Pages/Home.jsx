@@ -115,7 +115,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section className="about py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className=" px-6 md:px-30">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -238,7 +238,7 @@ export default function HomePage() {
 
       {/* Why Us Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className=" px-6 md:px-30">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -273,7 +273,7 @@ export default function HomePage() {
       <Blogs />
       {/* Ready Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 text-center text-black">
+        <div className="  px-6 md:px-40 text-center text-black">
           <motion.h2
             variants={fadeUp}
             initial="hidden"

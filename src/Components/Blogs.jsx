@@ -39,7 +39,7 @@ export default function Blogs() {
 
   return (
     <section className="py-16 bg-white" id="blogs">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className=" px-6 md:px-30">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

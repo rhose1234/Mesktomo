@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-greener text-white py-16">
-      <div className=" mx-auto px-8 md:px-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20">
+      <div className="px-8 md:px-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20">
         {/* Company Info */}
         <div>
           <Link to="/" className="flex items-center">
@@ -122,14 +122,14 @@ export default function Footer() {
             >
               <FaInstagram size={20} />
             </a>
-            <a
+            {/* <a
               href="https://facebook.com/mesktomolog"
               target="_blank"
               rel="noreferrer"
               className="hover:text-yellowa"
             >
               <FaFacebookF size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
