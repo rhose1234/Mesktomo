@@ -80,7 +80,19 @@ export default function TermsPage() {
           packaged or appear to be in poor condition upon acceptance.
         </p>
 
-        <p className="mt-12 text-gray-600 text-sm italic">
+
+        <h2 className="text-2xl font-bold text-black mb-6">
+  6. Use of Escorts
+</h2>
+<p className="mb-6">
+  Where security escorts are required or requested for the safe transit of
+  goods, the arrangement and cost of such escorts shall be the responsibility
+  of the Customer, unless otherwise agreed in writing. The Company may assist
+  in coordinating security escorts through approved third-party providers but
+  shall not be held liable for the performance or conduct of such escorts.
+</p>
+
+<p className="mt-12 text-gray-600 text-sm italic">
           <strong>Note:</strong> These Terms & Conditions are subject to review
           and may be updated. Customers are advised to consult a legal
           professional for clarification regarding liability, insurance, and
