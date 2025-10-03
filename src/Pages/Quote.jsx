@@ -33,7 +33,7 @@ export default function Quote() {
       date: Yup.string().required("Pickup date is required"),
     }),
     onSubmit: (values, { resetForm }) => {
-      fetch("https://mesktomolog.com/api/send-quote.php", {
+      fetch("https://mesktomolog.com/send-quote.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
