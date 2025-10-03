@@ -8,34 +8,77 @@
       MESKTOMO Logistics Limited | Efficient, time-bound logistics that impacts your business growth
     </title>
 
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
       content="MESKTOMO Logistics provides reliable and efficient logistics, warehousing, and supply chain solutions across Nigeria and international markets."
     />
-
     <meta
       name="keywords"
-      content="Logistics, Supply Chain, Cargo, Warehousing, Transportation, Nigeria"
+      content="Logistics, Supply Chain, Cargo, Warehousing, Transportation, Nigeria, Delivery, Shipping, MESKTOMO"
     />
+    <meta name="author" content="MESKTOMO Logistics Limited" />
+    <link rel="canonical" href="https://mesktomolog.com/" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="MESKTOMO Logistics Limited" />
     <meta
       property="og:description"
       content="Efficient, time-bound logistics that impacts your business growth"
     />
-    <meta property="og:image" content="https://mesktomo.vercel.app/logo.png" />
+    <meta property="og:image" content="https://mesktomolog.com/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://mesktomo.vercel.app/" />
+    <meta property="og:url" content="https://mesktomolog.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- ✅ Favicon -->
-    <link rel="icon" href="logo.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="logo.png" type="image/png" sizes="16x16" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MESKTOMO Logistics Limited" />
+    <meta
+      name="twitter:description"
+      content="Efficient, time-bound logistics that impacts your business growth"
+    />
+    <meta name="twitter:image" content="https://mesktomolog.com/logo.png" />
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="NG" />
+    <meta name="geo.placename" content="Nigeria" />
+    <meta name="geo.position" content="9.0820;8.6753" />
+    <meta name="ICBM" content="9.0820, 8.6753" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/logo.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/logo.png" type="image/png" sizes="16x16" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Structured Data (JSON-LD for Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MESKTOMO Logistics Limited",
+        "url": "https://mesktomolog.com/",
+        "logo": "https://mesktomolog.com/logo.png",
+        "sameAs": [
+          "https://facebook.com/mesktomolog",
+          "https://x.com/MESKTOMOLOG",
+          "https://www.instagram.com/mesktomolog",
+          "https://linkedin.com/company/mesktomolog"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+234-814-080-7725",
+          "contactType": "Customer Service",
+          "areaServed": "NG",
+          "availableLanguage": "English"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- React app will be injected here after build -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -22,7 +22,7 @@ const CompanySchema = Yup.object().shape({
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState(null);
-  const [formType, setFormType] = useState("individual"); // default
+  const [formType, setFormType] = useState("individual"); 
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
@@ -59,9 +59,9 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-   <section className="relative h-[calc(80vh-64px)]  pt-20 md:h-screen w-full flex items-center justify-center bg-greener px-0 md:px-6">
+   <section className="relative h-[calc(80vh-64px)]  pt-20 md:h-screen w-full flex items-center justify-center bg-greener px-0 md:px-30 ">
   {/* Wrapper */}
-  <div className="flex flex-col md:flex-row items-center gap-8 max-w-6xl w-full md:pt-20 pt-0">
+  <div className="flex flex-col md:flex-row items-center gap-8 w-full md:pt-20 pt-0">
     
     {/* Flag Image */}
     <img
@@ -98,8 +98,8 @@ export default function Contact() {
 
 
       {/* Contact Info + Form */}
-      <section className="py-20 px-6 md:px-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
+      <section className="py-20 px-6 md:px-30 bg-gray-50">
+        <div className="  grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

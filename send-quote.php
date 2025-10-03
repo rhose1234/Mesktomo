@@ -1,4 +1,11 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
@@ -20,31 +27,42 @@ $transport = htmlspecialchars($data['transport']);
 $date = htmlspecialchars($data['date']);
 $notes = htmlspecialchars($data['notes']);
 
-$to = "sales@mesktomolog.com"; 
-$subject = "🚚 New Quote Request from $name";
+$mail = new PHPMailer(true);
 
-$message = "
-You have a new quote request:
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.zoho.com'; 
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'sales@mesktomolog.com';
+    $mail->Password   = 'Fortsungil@33';     
+    $mail->SMTPSecure = 'tls'; 
+    $mail->Port       = 587;   
 
-Name: $name
-Email: $email
-Phone: $phone
-Weight: $weight KG
-Description: $description
-Pickup Location: $pickup
-Destination: $destination
-Transport Mode: $transport
-Pickup Date: $date
-Notes: $notes
-";
+    // Recipients
+    $mail->setFrom('sales@mesktomolog.com', 'MESKTOMO Website');
+    $mail->addAddress('sales@mesktomolog.com'); 
+    $mail->addReplyTo($email, $name);            
 
-$headers = "From: sales@mesktomolog.com\r\n"; 
-$headers .= "Reply-To: $email\r\n"; 
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = "🚚 New Quote Request from $name";
+    $mail->Body    = "
+        <h3>You have a new quote request:</h3>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Phone:</strong> $phone</p>
+        <p><strong>Weight:</strong> $weight KG</p>
+        <p><strong>Description:</strong> $description</p>
+        <p><strong>Pickup Location:</strong> $pickup</p>
+        <p><strong>Destination:</strong> $destination</p>
+        <p><strong>Transport Mode:</strong> $transport</p>
+        <p><strong>Pickup Date:</strong> $date</p>
+        <p><strong>Notes:</strong> $notes</p>
+    ";
 
-if (mail($to, $subject, $message, $headers)) {
-    echo json_encode(["success" => true, "message" => "Quote email sent"]);
-} else {
-    echo json_encode(["success" => false, "message" => "Quote email failed"]);
+    $mail->send();
+    echo json_encode(["success" => true, "message" => "Quote email sent via Zoho"]);
+} catch (Exception $e) {
+    echo json_encode(["success" => false, "message" => "Mailer Error: {$mail->ErrorInfo}"]);
 }
-?>

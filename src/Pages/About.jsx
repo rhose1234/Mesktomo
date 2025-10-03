@@ -73,7 +73,7 @@ export default function About() {
 
       {/* About Section */}
       <section className="pt-20 pb-10 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
+        <div className="px-6 md:px-30 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
           {/* Image */}
          <motion.div
   variants={fadeUp}
@@ -138,8 +138,9 @@ export default function About() {
         </div>
       </section>
 
+{/* vision and mission section */}
       <section className="pt-10 pb-20  bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="px-6 md:px-30 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision  card */}
           <motion.div
             variants={fadeUp}
@@ -185,7 +186,7 @@ export default function About() {
 
       {/* our commitment */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="px-6 md:px-30">
           {/* Section Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -237,7 +238,7 @@ export default function About() {
 <OurTeam />
       {/* trusted by */}
       <section className="pt-16 pb-8  overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="px-6 md:px-30">
           {/* Heading */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center ">
             Trusted by Businesses Across Industries
@@ -299,7 +300,7 @@ export default function About() {
         className="text-center mb-12"
       >
         <section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-4 md:mx-28">
-          <div className="max-w-4xl mx-auto text-center text-white px-4">
+          <div className="px-6 md:px-30 text-center text-white ">
             <p className="uppercase tracking-widest text-yellowa text-sm mb-2">
               Partner With Us
             </p>
