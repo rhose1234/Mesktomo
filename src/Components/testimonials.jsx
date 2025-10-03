@@ -72,6 +72,7 @@ export default function TestimonialSection() {
                   src={t.image}
                   alt={t.name}
                   className="w-16 h-16 rounded-full object-cover mb-4"
+                  loading="lazy"
                 />
                 <h3 className="font-bold text-base">{t.name}</h3>
                 <p className="text-sm text-gray-500">{t.role}</p>

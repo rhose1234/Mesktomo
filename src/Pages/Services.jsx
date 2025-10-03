@@ -57,7 +57,7 @@ export default function Services() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center text-white px-6">
+      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center text-white px-6" loading="lazy">
         <motion.h1
           className="text-4xl md:text-5xl font-extrabold"
           initial={{ opacity: 0, y: 30 }}
@@ -93,6 +93,7 @@ export default function Services() {
                 src={service.image}
                 alt={service.title}
                 className="w-full h-80 object-cover"
+                loading="lazy"
               />
               <div className="px-6 py-10 ">
                 <h3 className="text-xl font-bold group-hover:text-greener  transition duration-300">

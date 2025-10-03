@@ -68,6 +68,7 @@ export default function Contact() {
       src="https://i.postimg.cc/fRtQ9sdg/reduce-the-size-of-the-text-here-and-the-size-of-flag-too.jpg"
       alt="About MESKTOMO Logistics"
       className="rounded-none md:rounded:xl shadow-lg w-full md:w-1/2 object-cover"
+      loading="lazy"
     />
 
     {/* Text Content */}

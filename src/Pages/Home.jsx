@@ -72,7 +72,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="HeroSection min-h-screen w-full flex justify-center items-center flex-col text-center overflow-hidden ">
+      <section className="HeroSection min-h-screen w-full flex justify-center items-center flex-col text-center overflow-hidden " loading="lazy">
         <div className="max-w-3xl mx-auto px-6 text-white pt-20">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"

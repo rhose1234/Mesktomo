@@ -9,13 +9,14 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import HomePage from "./Pages/Home";
 import TermsPage from "./Pages/Terms";
+import ScrollToTop from "./Components/ScrollToTop";
 
 
 export default function App() {
   return (
     <>
       <Navbar />
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

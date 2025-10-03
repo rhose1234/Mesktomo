@@ -47,7 +47,7 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20">
+      <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20 " loading="lazy">
         <div className="max-w-3xl mx-auto px-6 text-white">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
@@ -88,6 +88,7 @@ export default function About() {
       src="https://i.postimg.cc/j5NBQDp7/transport-logistics-concept-1.jpg"
       alt="About MESKTOMO Logistics"
       className="rounded-xl shadow-lg w-full h-full object-cover"
+      loading="lazy"
     />
   </div>
 
@@ -220,6 +221,7 @@ export default function About() {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                 />
 
                 {/* Always-visible Overlay */}

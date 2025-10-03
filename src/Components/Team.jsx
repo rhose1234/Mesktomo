@@ -71,6 +71,7 @@ export default function OurTeam() {
                 src={selectedMember.image}
                 alt={selectedMember.name}
                 className="w-32 h-32 object-cover "
+                loading="lazy"
               />
               <div>
                 <h3 className="text-xl font-bold text-white">{selectedMember.name}</h3>
