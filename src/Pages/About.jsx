@@ -48,7 +48,7 @@ export default function About() {
     <>
       {/* Hero Section */}
       <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20 " loading="lazy">
-        <div className="max-w-3xl mx-auto px-6 text-white">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30 text-white">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
             initial={{ opacity: 0, y: 30 }}
@@ -73,7 +73,7 @@ export default function About() {
 
       {/* About Section */}
       <section className="pt-20 pb-10 bg-white">
-        <div className="px-6 md:px-30 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
           {/* Image */}
          <motion.div
   variants={fadeUp}
@@ -141,7 +141,7 @@ export default function About() {
 
 {/* vision and mission section */}
       <section className="pt-10 pb-20  bg-white">
-        <div className="px-6 md:px-30 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision  card */}
           <motion.div
             variants={fadeUp}
@@ -187,7 +187,7 @@ export default function About() {
 
       {/* our commitment */}
       <section className="py-16 bg-gray-50">
-        <div className="px-6 md:px-30">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30">
           {/* Section Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -240,7 +240,7 @@ export default function About() {
 <OurTeam />
       {/* trusted by */}
       <section className="pt-16 pb-8  overflow-hidden">
-        <div className="px-6 md:px-30">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30">
           {/* Heading */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center ">
             Trusted by Businesses Across Industries
@@ -301,7 +301,7 @@ export default function About() {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center mb-12"
       >
-        <section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-4 md:mx-28">
+        <section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-6 sm:mx-10 md:mx-16 lg:mx-30">
           <div className="px-6 md:px-30 text-center text-white ">
             <p className="uppercase tracking-widest text-yellowa text-sm mb-2">
               Partner With Us

@@ -115,7 +115,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section className="about py-16">
-        <div className=" px-6 md:px-30">
+        <div className=" px-6 sm:px-10 md:px-16 lg:px-30">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -128,52 +128,51 @@ export default function HomePage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
-            <motion.img
-              variants={fadeLeft}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-              src="https://i.postimg.cc/SNp6WCSF/about.jpg"
-              alt="About MESKTOMO Logistics"
-              className="rounded-2xl shadow-lg w-full object-cover"
-              loading="lazy"
-            />
-            <motion.div
-              variants={fadeRight}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <p className="text-gray-700 text-base/8 w-full">
-                At{" "}
-                <span className="font-bold text-black">
-                  MESKTOMO LOGISTICS LIMITED
-                </span>
-                , we are more than just a logistics provider - we are a trusted
-                partner committed to simplifying supply chains and empowering
-                business growth. With a blend of industry expertise and
-                cutting-edge technology, we ensure that every shipment is
-                delivered safely, on time, and cost-effectively.
-              </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link to="/about">
-                  <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold transition duration-300">
-                    Learn More
-                  </button>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+  <motion.img
+    variants={fadeLeft}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.3 }}
+    src="https://i.postimg.cc/SNp6WCSF/about.jpg"
+    alt="About MESKTOMO Logistics"
+    className="rounded-2xl shadow-lg w-full h-full object-cover"
+    loading="lazy"
+  />
+  <motion.div
+    variants={fadeRight}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.3 }}
+    className="h-full flex flex-col justify-center"
+  >
+    <p className="text-gray-700 text-base/8 w-full">
+      At{" "}
+      <span className="font-bold text-black">
+        MESKTOMO LOGISTICS LIMITED
+      </span>
+      , we are more than just a logistics provider - we are a trusted
+      partner committed to simplifying supply chains and empowering
+      business growth. With a blend of industry expertise and
+      cutting-edge technology, we ensure that every shipment is
+      delivered safely, on time, and cost-effectively.
+    </p>
+    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <Link to="/about">
+        <button className="mt-3 bg-yellowa text-greener px-6 py-3 rounded-full font-bold transition duration-300">
+          Learn More
+        </button>
+      </Link>
+    </motion.div>
+  </motion.div>
+</div>
+
         </div>
       </section>
 
        {/* Industries Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="px-6 sm:px-10 md:px-16 lg:px-30 text-center">
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -238,7 +237,7 @@ export default function HomePage() {
 
       {/* Why Us Section */}
       <section className="py-16 bg-white">
-        <div className=" px-6 md:px-30">
+        <div className=" px-6 sm:px-10 md:px-16 lg:px-30">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -273,7 +272,7 @@ export default function HomePage() {
       <Blogs />
       {/* Ready Section */}
       <section className="py-20 bg-gray-50">
-        <div className="  px-6 md:px-40 text-center text-black">
+        <div className="  px-6 sm:px-10 md:px-16 lg:px-40 text-center text-black">
           <motion.h2
             variants={fadeUp}
             initial="hidden"

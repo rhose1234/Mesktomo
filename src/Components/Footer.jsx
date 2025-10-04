@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-greener text-white py-16">
-      <div className="px-8 md:px-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20">
+      <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20 ">
         {/* Company Info */}
         <div>
           <Link to="/" className="flex items-center">
@@ -135,7 +135,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-300">
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-gray-300">
         © {new Date().getFullYear()} MESKTOMO LOGISTICS LIMITED. All Rights
         Reserved.
       </div>

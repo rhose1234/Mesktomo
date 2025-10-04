@@ -57,7 +57,7 @@ export default function Services() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center text-white px-6" loading="lazy">
+      <section className="servicesHero h-[100vh] flex flex-col justify-center items-center text-center text-white px-6 sm:px-10 md:px-16 lg:px-30" loading="lazy">
         <motion.h1
           className="text-4xl md:text-5xl font-extrabold"
           initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="md:px-30 mt-10 px-6 py-10">
+      <section className="mt-10  py-10 px-6 sm:px-10 md:px-16 lg:px-30">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <motion.div

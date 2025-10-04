@@ -26,7 +26,7 @@ export default function OurTeam() {
   const [selectedMember, setSelectedMember] = useState(null);
 
   return (
-    <section className="pt-20 pb-10 bg-white px-6 md:px-28">
+    <section className="pt-20 pb-10 bg-white px-6 sm:px-10 md:px-16 lg:px-30">
       <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

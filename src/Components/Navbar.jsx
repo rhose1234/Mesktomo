@@ -51,7 +51,7 @@ export default function Navbar() {
         scroll ? "scroll shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between py-4 px-6 md:px-28">
+      <div className="flex items-center justify-between py-4 px-6 sm:px-10 md:px-16 lg:px-30">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="logo" className="w-20" loading="lazy" />

@@ -5,7 +5,7 @@ export default function TermsPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="h-[100vh] flex flex-col justify-center items-center text-center bg-greener text-white px-6">
+      <section className="h-[100vh] flex flex-col justify-center items-center text-center bg-greener text-white px-6 sm:px-10 md:px-16 lg:px-30">
         <h1 className="text-4xl md:text-5xl font-extrabold">
           Terms & Conditions
         </h1>

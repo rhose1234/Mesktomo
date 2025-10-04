@@ -29,7 +29,7 @@ const services = [
 export default function Flow() {
   return (
     <section className="bg-gray-50 py-12">
-      <div className="md:px-20  px-6 md:px-30 grid grid-cols-1 md:grid-cols-4 md:gap-10 gap-6 text-center">
+      <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-cols-1 md:grid-cols-4 md:gap-10 gap-6 text-center">
         {services.map((service, index) => (
           <motion.a
             key={index}

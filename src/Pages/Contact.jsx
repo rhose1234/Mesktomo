@@ -59,22 +59,22 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-   <section className="relative h-[calc(80vh-64px)]  pt-20 md:h-screen w-full flex items-center justify-center bg-greener px-0 md:px-30 ">
+  <section className="relative h-[calc(80vh-64px)] pt-20 lg:h-screen w-full flex items-center justify-center bg-greener px-6 sm:px-10 md:px-16 lg:px-30">
   {/* Wrapper */}
-  <div className="flex flex-col md:flex-row items-center gap-8 w-full md:pt-20 pt-0">
+  <div className="flex flex-col lg:flex-row items-center gap-8 w-full lg:pt-20 pt-0">
     
     {/* Flag Image */}
     <img
       src="https://i.postimg.cc/fRtQ9sdg/reduce-the-size-of-the-text-here-and-the-size-of-flag-too.jpg"
       alt="About MESKTOMO Logistics"
-      className="rounded-none md:rounded:xl shadow-lg w-full md:w-1/2 object-cover"
+      className="rounded-none lg:rounded-xl shadow-lg w-full lg:w-1/2 object-cover"
       loading="lazy"
     />
 
     {/* Text Content */}
-    <div className="text-center md:text-left text-white max-w-2xl px-4 md:px-0">
+    <div className="text-center lg:text-left text-white max-w-2xl px-4 lg:px-0">
       <motion.h1
-        className="text-3xl md:text-6xl font-extrabold leading-tight break-words"
+        className="text-3xl lg:text-6xl font-extrabold leading-tight break-words"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -83,7 +83,7 @@ export default function Contact() {
       </motion.h1>
 
       <motion.p
-        className="mt-4 text-base md:text-lg"
+        className="mt-4 text-base lg:text-lg"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -95,11 +95,12 @@ export default function Contact() {
 </section>
 
 
+
      
 
 
       {/* Contact Info + Form */}
-      <section className="py-20 px-6 md:px-30 bg-gray-50">
+      <section className="py-20 px-6 sm:px-10 md:px-16 lg:px-30 bg-gray-50">
         <div className="  grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Contact Info */}
           <motion.div
