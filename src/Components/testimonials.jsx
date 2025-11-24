@@ -76,7 +76,7 @@ export default function TestimonialSection() {
                 />
                 <h3 className="font-bold text-base">{t.name}</h3>
                 <p className="text-sm text-gray-500">{t.role}</p>
-                <p className="mt-3 text-gray-700 text-sm/6 h-60 italic">
+                <p className="mt-3 text-gray-700 text-sm/6 h-60 italic text-center">
                   "{t.text}"
                 </p>
               </div>

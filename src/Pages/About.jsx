@@ -47,7 +47,7 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="AboutHero h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20 " loading="lazy">
+      <section className="AboutHero min-h-screen relative flex justify-center text-center items-center flex-col z-0 w-full pt-20" loading="lazy">
         <div className="px-6 sm:px-10 md:px-16 lg:px-30 text-white">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight break-words"
@@ -59,90 +59,94 @@ export default function About() {
           </motion.h1>
 
           <motion.p
-            className="mt-2 max-w-2xl text-base"
+            className="mt-2 max-w-2xl text-base mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            We are more than just a logistics company, we’re a trusted partner
-            dedicated to simplifying supply chains and driving business growth
-            globally
+            We are more than just a logistics company — we’re a trusted partner
+            dedicated to simplifying supply chains and driving business growth globally.
           </motion.p>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="pt-20 pb-10 bg-white">
-        <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-row-1 md:grid-row-2 gap-12 items-center ">
-          {/* Image */}
-         <motion.div
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.3 }}
-  className="grid grid-cols-1 md:grid-cols-2 gap-4"
->
-  {/* Left Column (Single Image) */}
-  <div>
-    <img
-      src="https://i.postimg.cc/j5NBQDp7/transport-logistics-concept-1.jpg"
-      alt="About MESKTOMO Logistics"
-      className="rounded-xl shadow-lg w-full h-full object-cover"
-      loading="lazy"
-    />
+      
+{/* About Section */}
+<section className="pt-20 pb-10 bg-white">
+  <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Images */}
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      className="grid grid-cols-1 gap-4"
+    >
+      {/* Top Image (Full Width) */}
+      <div>
+        <img
+          src="https://i.postimg.cc/j5NBQDp7/transport-logistics-concept-1.jpg"
+          alt="About MESKTOMO Logistics"
+          className="rounded-xl shadow-lg w-full h-auto object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Bottom Two Images Side by Side */}
+      <div className="grid grid-cols-2 gap-4">
+        <img
+          src="https://i.postimg.cc/CMJpvqZP/A-professional-logistics-image-featuring-three-modern-trucks-with-large-shipping-containers-The-tru.jpg"
+          alt="Logistics Trucks"
+          className="rounded-xl shadow-lg w-full h-auto object-cover"
+          loading="lazy"
+        />
+        <img
+          src="https://i.postimg.cc/FHDWjy1W/fleet-trucks-bus-clear-day.jpg"
+          alt="Fleet of Trucks"
+          className="rounded-xl shadow-lg w-full h-auto object-cover"
+          loading="lazy"
+        />
+      </div>
+    </motion.div>
+
+    {/* Text */}
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center md:text-left">
+        Who We Are
+      </h2>
+      <p className="text-gray-700 text-base leading-relaxed mb-4 text-center md:text-left">
+        {" "}
+        <span className="font-bold text-black">
+          MESKTOMO LOGISTICS LIMITED is a logistics provider and a licensed Customs Clearing Agent
+        </span>
+        , we understand the dynamic nature of global trade and the importance
+        of robust logistics support. Established with a vision to transform the
+        logistics experience, our team combines industry expertise with
+        cutting-edge technology to ensure your shipments reach their
+        destinations safely, timely, and cost-effectively.
+      </p>
+      <p className="text-gray-700 text-base leading-relaxed text-center md:text-left">
+        Our company integrates best practices in operations, compliance, and
+        customer service, making us adaptable to the unique needs of our
+        clients. Whether you’re a multinational corporation or a local
+        enterprise, we offer tailor-made solutions to streamline your supply
+        chain and optimize your business performance.
+      </p>
+    </motion.div>
   </div>
+</section>
 
-  {/* Right Column (Two Images stacked) */}
-  <div className="grid grid-rows-2 gap-4">
-    <img
-      src="https://i.postimg.cc/CMJpvqZP/A-professional-logistics-image-featuring-three-modern-trucks-with-large-shipping-containers-The-tru.jpg"
-      alt="About MESKTOMO Logistics"
-      className="rounded-xl shadow-lg w-full h-full object-cover"
-    />
-    <img
-      src="https://i.postimg.cc/FHDWjy1W/fleet-trucks-bus-clear-day.jpg"
-      alt="About MESKTOMO Logistics"
-      className="rounded-xl shadow-lg w-full h-full object-cover"
-    />
-  </div>
-</motion.div>
 
-          {/* Text */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center">
-              Who We Are
-            </h2>
-            <p className="text-gray-700 text-base/6 mb-4 text-center">
-              At{" "}
-              <span className="font-bold text-black">
-                MESKTOMO LOGISTICS LIMITED
-              </span>
-              , we understand the dynamic nature of global trade and the
-              importance of robust logistics support. Established with a vision
-              to transform the logistics experience, our team combines industry
-              expertise with cutting-edge technology to ensure your shipments
-              reach their destinations safely, timely, and cost-effectively.
-            </p>
-            <p className="text-gray-700 text-base/6 text-center">
-              Our company integrates best practices in operations, compliance,
-              and customer service, making us adaptable to the unique needs of
-              our clients. Whether you’re a multinational corporation or a local
-              enterprise, we offer tailor-made solutions to streamline your
-              supply chain and optimize your business performance.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
-{/* vision and mission section */}
-      <section className="pt-10 pb-20  bg-white">
+      {/* Vision and Mission Section */}
+      <section className="pt-10 pb-20 bg-white">
         <div className="px-6 sm:px-10 md:px-16 lg:px-30 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Vision  card */}
+          {/* Vision card */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -178,17 +182,16 @@ export default function About() {
             </h3>
             <p className="text-gray-700 text-base leading-relaxed">
               We simplify supply chains through technology, operational
-              excellence, and customer-centric solutions. Ensuring timely,
+              excellence, and customer-centric solutions — ensuring timely,
               compliant, and cost-effective delivery for every client.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* our commitment */}
+      {/* Our Commitment */}
       <section className="py-16 bg-gray-50">
         <div className="px-6 sm:px-10 md:px-16 lg:px-30">
-          {/* Section Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,14 +201,13 @@ export default function About() {
             <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3">
               Our Commitment to Quality and Safety
             </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base/6">
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
               Quality assurance, safety, and compliance are the cornerstones of
               our operations. Through continuous improvement and technology, we
               strive to exceed your expectations in every transaction.
             </p>
           </motion.div>
 
-          {/* Grid of Commitments */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {commitments.map((item, index) => (
               <motion.div
@@ -213,18 +215,15 @@ export default function About() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                whileHover={{ scale: 1.05 }} // zoom effect
+                whileHover={{ scale: 1.05 }}
                 className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500"
               >
-                {/* Background Image */}
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-64 object-cover"
                   loading="lazy"
                 />
-
-                {/* Always-visible Overlay */}
                 <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {item.title}
@@ -237,22 +236,21 @@ export default function About() {
         </div>
       </section>
 
-<OurTeam />
-      {/* trusted by */}
-      <section className="pt-16 pb-8  overflow-hidden">
+      <OurTeam />
+
+      {/* Trusted By */}
+      <section className="pt-16 pb-8 overflow-hidden">
         <div className="px-6 sm:px-10 md:px-16 lg:px-30">
-          {/* Heading */}
-          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center ">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 text-center">
             Trusted by Businesses Across Industries
           </h2>
-          {/* Centered Paragraph */}
-          <p className="text-center text-base/6 text-gray-700 mt-3 max-w-3xl mx-auto mb-12">
+          <p className="text-center text-base leading-relaxed text-gray-700 mt-3 max-w-3xl mx-auto mb-12">
             We understand the unique logistics challenges faced by each sector
             and customize our services to facilitate efficient, compliant, and
             secure movement of goods.
           </p>
 
-          {/* First Row (scroll left) */}
+          {/* Row 1 */}
           <motion.div
             className="flex space-x-6 mb-6"
             animate={{ x: ["0%", "-50%"] }}
@@ -272,9 +270,9 @@ export default function About() {
             ))}
           </motion.div>
 
-          {/* Second Row (scroll right) */}
+          {/* Row 2 */}
           <motion.div
-            className="flex space-x-6 mb-6"
+            className="flex space-x-6"
             animate={{ x: ["-50%", "0%"] }}
             transition={{
               ease: "linear",
@@ -294,7 +292,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* partner with us */}
+      {/* Partner With Us */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -302,20 +300,17 @@ export default function About() {
         className="text-center mb-12"
       >
         <section className="relative py-20 mt-4 mb-20 bg-greener rounded-3xl mx-6 sm:mx-10 md:mx-16 lg:mx-30">
-          <div className="px-6 md:px-30 text-center text-white ">
+          <div className="px-6 md:px-30 text-center text-white">
             <p className="uppercase tracking-widest text-yellowa text-sm mb-2">
               Partner With Us
             </p>
-
             <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
               Let’s Build the Future of Logistics
             </h2>
-
-            <p className="mb-8 text-sm md:text-base/6">
+            <p className="mb-8 text-sm md:text-base leading-relaxed">
               Whatever your logistics needs, MESKTOMO LOGISTICS LIMITED provides
               the reliability, expertise, and service excellence you deserve.
             </p>
-
             <a
               href="mailto:sales@mesktomolog.com"
               className="bg-yellowa text-greener px-8 py-3 rounded-full font-bold hover:bg-white hover:text-greener transition duration-300"

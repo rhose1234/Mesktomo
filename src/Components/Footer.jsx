@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Company Info */}
         <div>
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="logo" className="w-20" />
+            <img src={logo} alt="logo" className="w-16" />
           </Link>
           <p className="mt-3 text-sm/6 text-white"> Efficient, time-bound logistics that impacts your business growth | 
             Delivering Excellence in Logistics Solutions.

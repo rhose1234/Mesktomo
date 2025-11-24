@@ -14,8 +14,8 @@ const HighlightCard = memo(({ item, card }) => (
     className="p-6 bg-white rounded-2xl shadow-sm text-center"
   >
     <div className="flex justify-center mb-4">{item.icon}</div>
-    <h3 className="font-bold text-base h-8 text-black">{item.title}</h3>
-    <p className="text-gray-600 mt-2 text-base/6">{item.description}</p>
+    <h3 className="font-bold text-base h-8 mb-8 text-black">{item.title}</h3>
+    <p className="text-gray-600 mt-2 text-base/6 text-center">{item.description}</p>
   </motion.div>
 ));
 
@@ -147,11 +147,10 @@ export default function HomePage() {
     className="h-full flex flex-col justify-center"
   >
     <p className="text-gray-700 text-base/8 w-full">
-      At{" "}
       <span className="font-bold text-black">
         MESKTOMO LOGISTICS LIMITED
       </span>
-      , we are more than just a logistics provider - we are a trusted
+     {" "} is a logistics provider and a licensed customs clearing agent, a trusted
       partner committed to simplifying supply chains and empowering
       business growth. With a blend of industry expertise and
       cutting-edge technology, we ensure that every shipment is

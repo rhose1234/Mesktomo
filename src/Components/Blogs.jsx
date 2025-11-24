@@ -73,8 +73,8 @@ export default function Blogs() {
         loading="lazy"
       />
       <div className="p-6">
-        <h3 className="font-bold text-lg text-black mb-2 h-24">{post.title}</h3>
-        <p className="text-gray-600 text-sm mb-4 h-30">{post.desc}</p>
+        <h3 className="font-bold text-lg text-black mb-2 h-24 text-left" >{post.title}</h3>
+        <p className="text-gray-600 text-sm mb-4 h-30 text-left">{post.desc}</p>
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-500">{post.readTime}</span>
           <a
