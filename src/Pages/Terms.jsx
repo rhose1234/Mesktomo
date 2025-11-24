@@ -94,7 +94,7 @@ export default function TermsPage() {
       <div className="w-full bg-yellowa text-gray-800 py-2 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap text-sm font-bold text-greener">
         <p>
-            <strong>We are officially a Customs Clearing agent</strong> 
+            <strong>We are officially a Liscenced Customs Clearing agent</strong> 
 
         </p>
         </div>
